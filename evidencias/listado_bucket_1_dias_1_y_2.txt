@@ -1,0 +1,4 @@
+# Listado de s3://de-gr02-user-4-entregas-examen/ después de cargar los días 1 y 2 (2026-11-12T11:49:23Z)
+2026-11-12 06:49:06        313 entregas/fecha=2026-10-01/entregas.csv
+2026-11-12 06:49:07        313 entregas/fecha=2026-10-02/entregas.csv
+(fin del listado)

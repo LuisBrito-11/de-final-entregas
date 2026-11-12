@@ -1,0 +1,44 @@
+{
+    "QueryExecution": {
+        "QueryExecutionId": "a934d421-ae79-4efd-8c06-a8e8a9b37685",
+        "Query": "SELECT\n    count(*) AS total_registros,\n    sum(CASE WHEN fecha = '2026-10-03' THEN 1 ELSE 0 END) AS registros_2026_10_03,\n    count(DISTINCT fecha) AS fechas_con_datos\nFROM de_gr02_user_4_entregas.entregas",
+        "StatementType": "DML",
+        "ResultConfiguration": {
+            "OutputLocation": "s3://de-gr02-user-4-entregas-examen/resultados-athena/a934d421-ae79-4efd-8c06-a8e8a9b37685.csv",
+            "EncryptionConfiguration": {
+                "EncryptionOption": "SSE_S3"
+            }
+        },
+        "ResultReuseConfiguration": {
+            "ResultReuseByAgeConfiguration": {
+                "Enabled": false
+            }
+        },
+        "QueryExecutionContext": {
+            "Database": "de_gr02_user_4_entregas"
+        },
+        "Status": {
+            "State": "SUCCEEDED",
+            "SubmissionDateTime": "2026-11-12T06:50:53.560000-05:00",
+            "CompletionDateTime": "2026-11-12T06:50:54.129000-05:00"
+        },
+        "Statistics": {
+            "EngineExecutionTimeInMillis": 439,
+            "DataScannedInBytes": 626,
+            "TotalExecutionTimeInMillis": 569,
+            "QueryQueueTimeInMillis": 57,
+            "ServicePreProcessingTimeInMillis": 45,
+            "QueryPlanningTimeInMillis": 120,
+            "ServiceProcessingTimeInMillis": 28,
+            "ResultReuseInformation": {
+                "ReusedPreviousResult": false
+            }
+        },
+        "WorkGroup": "de-gr02-user-4-entregas",
+        "EngineVersion": {
+            "SelectedEngineVersion": "AUTO",
+            "EffectiveEngineVersion": "Athena engine version 3"
+        },
+        "SubstatementType": "SELECT"
+    }
+}
