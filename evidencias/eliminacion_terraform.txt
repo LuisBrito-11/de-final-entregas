@@ -1,0 +1,623 @@
+# Evidencia de eliminación de los recursos del punto 1
+# Fecha (UTC): 2026-11-12T11:55:33Z  |  Región: us-east-2  |  Usuario IAM: de-gr02-user-4
+
+########## 1. Contenido del bucket antes de vaciarlo ##########
+2026-11-12 06:49:06        313 entregas/fecha=2026-10-01/entregas.csv
+2026-11-12 06:49:07        313 entregas/fecha=2026-10-02/entregas.csv
+2026-11-12 06:52:13        323 entregas/fecha=2026-10-03/entregas.csv
+2026-11-12 06:51:14        252 resultados-athena/022723fb-e5ce-4152-89ab-afc897107a3e.csv
+2026-11-12 06:51:14        173 resultados-athena/022723fb-e5ce-4152-89ab-afc897107a3e.csv.metadata
+2026-11-12 06:52:37        143 resultados-athena/27d58e30-e765-4d15-9431-1622e9da3f57.csv
+2026-11-12 06:52:37        173 resultados-athena/27d58e30-e765-4d15-9431-1622e9da3f57.csv.metadata
+2026-11-12 06:51:32         57 resultados-athena/4a12c1d3-89bf-47e9-b49a-12d2f8744969.csv
+2026-11-12 06:51:33        151 resultados-athena/4a12c1d3-89bf-47e9-b49a-12d2f8744969.csv.metadata
+2026-11-12 06:51:23        160 resultados-athena/55dde145-fe22-478b-9b83-ac259516b648.csv
+2026-11-12 06:51:23        178 resultados-athena/55dde145-fe22-478b-9b83-ac259516b648.csv.metadata
+2026-11-12 06:50:55         73 resultados-athena/a934d421-ae79-4efd-8c06-a8e8a9b37685.csv
+2026-11-12 06:50:55        215 resultados-athena/a934d421-ae79-4efd-8c06-a8e8a9b37685.csv.metadata
+2026-11-12 06:52:29        479 resultados-athena/c65674f4-197f-4297-9350-26ba61556520.csv
+2026-11-12 06:52:29        333 resultados-athena/c65674f4-197f-4297-9350-26ba61556520.csv.metadata
+2026-11-12 06:53:05        222 resultados-athena/d0250d45-d373-46b3-b303-7969497d1fa3.csv
+2026-11-12 06:53:05        178 resultados-athena/d0250d45-d373-46b3-b303-7969497d1fa3.csv.metadata
+2026-11-12 06:52:45         23 resultados-athena/e9a046d4-b9df-423e-9b76-712889b98af0.csv
+2026-11-12 06:52:45         87 resultados-athena/e9a046d4-b9df-423e-9b76-712889b98af0.csv.metadata
+2026-11-12 06:52:54        361 resultados-athena/efe6fbeb-506b-461c-8f1e-d1aa162da293.csv
+2026-11-12 06:52:54        173 resultados-athena/efe6fbeb-506b-461c-8f1e-d1aa162da293.csv.metadata
+
+########## 2. aws s3 rm s3://de-gr02-user-4-entregas-examen/ --recursive ##########
+delete: s3://de-gr02-user-4-entregas-examen/resultados-athena/27d58e30-e765-4d15-9431-1622e9da3f57.csv
+delete: s3://de-gr02-user-4-entregas-examen/resultados-athena/022723fb-e5ce-4152-89ab-afc897107a3e.csv.metadata
+delete: s3://de-gr02-user-4-entregas-examen/entregas/fecha=2026-10-02/entregas.csv
+delete: s3://de-gr02-user-4-entregas-examen/entregas/fecha=2026-10-03/entregas.csv
+delete: s3://de-gr02-user-4-entregas-examen/resultados-athena/27d58e30-e765-4d15-9431-1622e9da3f57.csv.metadata
+delete: s3://de-gr02-user-4-entregas-examen/entregas/fecha=2026-10-01/entregas.csv
+delete: s3://de-gr02-user-4-entregas-examen/resultados-athena/55dde145-fe22-478b-9b83-ac259516b648.csv
+delete: s3://de-gr02-user-4-entregas-examen/resultados-athena/022723fb-e5ce-4152-89ab-afc897107a3e.csv
+delete: s3://de-gr02-user-4-entregas-examen/resultados-athena/4a12c1d3-89bf-47e9-b49a-12d2f8744969.csv
+delete: s3://de-gr02-user-4-entregas-examen/resultados-athena/4a12c1d3-89bf-47e9-b49a-12d2f8744969.csv.metadata
+delete: s3://de-gr02-user-4-entregas-examen/resultados-athena/e9a046d4-b9df-423e-9b76-712889b98af0.csv.metadata
+delete: s3://de-gr02-user-4-entregas-examen/resultados-athena/c65674f4-197f-4297-9350-26ba61556520.csv
+delete: s3://de-gr02-user-4-entregas-examen/resultados-athena/a934d421-ae79-4efd-8c06-a8e8a9b37685.csv
+delete: s3://de-gr02-user-4-entregas-examen/resultados-athena/a934d421-ae79-4efd-8c06-a8e8a9b37685.csv.metadata
+delete: s3://de-gr02-user-4-entregas-examen/resultados-athena/55dde145-fe22-478b-9b83-ac259516b648.csv.metadata
+delete: s3://de-gr02-user-4-entregas-examen/resultados-athena/c65674f4-197f-4297-9350-26ba61556520.csv.metadata
+delete: s3://de-gr02-user-4-entregas-examen/resultados-athena/efe6fbeb-506b-461c-8f1e-d1aa162da293.csv
+delete: s3://de-gr02-user-4-entregas-examen/resultados-athena/d0250d45-d373-46b3-b303-7969497d1fa3.csv
+delete: s3://de-gr02-user-4-entregas-examen/resultados-athena/d0250d45-d373-46b3-b303-7969497d1fa3.csv.metadata
+delete: s3://de-gr02-user-4-entregas-examen/resultados-athena/efe6fbeb-506b-461c-8f1e-d1aa162da293.csv.metadata
+delete: s3://de-gr02-user-4-entregas-examen/resultados-athena/e9a046d4-b9df-423e-9b76-712889b98af0.csv
+
+########## 3. Comprobación: objetos y versiones restantes ##########
+aws s3 ls (vacío si no imprime nada):
+{
+    "RequestCharged": null,
+    "Prefix": ""
+}
+
+########## 4. terraform plan -destroy ##########
+aws_glue_catalog_database.entregas: Refreshing state... [id=802655955683:de_gr02_user_4_entregas]
+aws_s3_bucket.datos: Refreshing state... [id=de-gr02-user-4-entregas-examen]
+aws_s3_bucket_server_side_encryption_configuration.datos: Refreshing state... [id=de-gr02-user-4-entregas-examen]
+aws_s3_bucket_ownership_controls.datos: Refreshing state... [id=de-gr02-user-4-entregas-examen]
+aws_s3_bucket_public_access_block.datos: Refreshing state... [id=de-gr02-user-4-entregas-examen]
+aws_athena_workgroup.entregas: Refreshing state... [id=de-gr02-user-4-entregas]
+aws_glue_catalog_table.entregas: Refreshing state... [id=802655955683:de_gr02_user_4_entregas:entregas]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_athena_workgroup.entregas will be destroyed
+  - resource "aws_athena_workgroup" "entregas" {
+      - arn           = "arn:aws:athena:us-east-2:802655955683:workgroup/de-gr02-user-4-entregas" -> null
+      - description   = "Consultas del examen final sobre la tabla de entregas." -> null
+      - force_destroy = true -> null
+      - id            = "de-gr02-user-4-entregas" -> null
+      - name          = "de-gr02-user-4-entregas" -> null
+      - region        = "us-east-2" -> null
+      - state         = "ENABLED" -> null
+      - tags          = {} -> null
+      - tags_all      = {} -> null
+
+      - configuration {
+          - bytes_scanned_cutoff_per_query          = 0 -> null
+          - enable_minimum_encryption_configuration = false -> null
+          - enforce_workgroup_configuration         = true -> null
+          - publish_cloudwatch_metrics_enabled      = false -> null
+          - requester_pays_enabled                  = false -> null
+            # (1 unchanged attribute hidden)
+
+          - engine_version {
+              - effective_engine_version = "Athena engine version 3" -> null
+              - selected_engine_version  = "AUTO" -> null
+            }
+
+          - result_configuration {
+              - output_location       = "s3://de-gr02-user-4-entregas-examen/resultados-athena/" -> null
+                # (1 unchanged attribute hidden)
+
+              - encryption_configuration {
+                  - encryption_option = "SSE_S3" -> null
+                    # (1 unchanged attribute hidden)
+                }
+            }
+        }
+    }
+
+  # aws_glue_catalog_database.entregas will be destroyed
+  - resource "aws_glue_catalog_database" "entregas" {
+      - arn          = "arn:aws:glue:us-east-2:802655955683:database/de_gr02_user_4_entregas" -> null
+      - catalog_id   = "802655955683" -> null
+      - description  = "Intentos de entrega de paquetes (examen final, punto 1)." -> null
+      - id           = "802655955683:de_gr02_user_4_entregas" -> null
+      - name         = "de_gr02_user_4_entregas" -> null
+      - parameters   = {} -> null
+      - region       = "us-east-2" -> null
+      - tags         = {} -> null
+      - tags_all     = {} -> null
+        # (1 unchanged attribute hidden)
+
+      - create_table_default_permission {
+          - permissions = [
+              - "ALL",
+            ] -> null
+
+          - principal {
+              - data_lake_principal_identifier = "IAM_ALLOWED_PRINCIPALS" -> null
+            }
+        }
+    }
+
+  # aws_glue_catalog_table.entregas will be destroyed
+  - resource "aws_glue_catalog_table" "entregas" {
+      - arn                = "arn:aws:glue:us-east-2:802655955683:table/de_gr02_user_4_entregas/entregas" -> null
+      - catalog_id         = "802655955683" -> null
+      - database_name      = "de_gr02_user_4_entregas" -> null
+      - description        = "Un intento de entrega por fila. La fecha sale de la carpeta fecha=yyyy-MM-dd." -> null
+      - id                 = "802655955683:de_gr02_user_4_entregas:entregas" -> null
+      - name               = "entregas" -> null
+      - parameters         = {
+          - "EXTERNAL"                       = "TRUE"
+          - "classification"                 = "csv"
+          - "projection.enabled"             = "true"
+          - "projection.fecha.format"        = "yyyy-MM-dd"
+          - "projection.fecha.interval"      = "1"
+          - "projection.fecha.interval.unit" = "DAYS"
+          - "projection.fecha.range"         = "2026-10-01,2026-10-03"
+          - "projection.fecha.type"          = "date"
+          - "skip.header.line.count"         = "1"
+          - "storage.location.template"      = "s3://de-gr02-user-4-entregas-examen/entregas/fecha=${fecha}/"
+        } -> null
+      - region             = "us-east-2" -> null
+      - retention          = 0 -> null
+      - table_type         = "EXTERNAL_TABLE" -> null
+        # (3 unchanged attributes hidden)
+
+      - partition_keys {
+          - comment    = "Fecha del archivo diario, tomada de la carpeta fecha=yyyy-MM-dd." -> null
+          - name       = "fecha" -> null
+          - parameters = {} -> null
+          - type       = "string" -> null
+        }
+
+      - storage_descriptor {
+          - additional_locations      = [] -> null
+          - bucket_columns            = [] -> null
+          - compressed                = false -> null
+          - input_format              = "org.apache.hadoop.mapred.TextInputFormat" -> null
+          - location                  = "s3://de-gr02-user-4-entregas-examen/entregas/" -> null
+          - number_of_buckets         = 0 -> null
+          - output_format             = "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat" -> null
+          - parameters                = {} -> null
+          - stored_as_sub_directories = false -> null
+
+          - columns {
+              - comment    = "Identificador único del envío." -> null
+              - name       = "id_envio" -> null
+              - parameters = {} -> null
+              - type       = "string" -> null
+            }
+          - columns {
+              - comment    = "Ciudad del intento de entrega." -> null
+              - name       = "ciudad" -> null
+              - parameters = {} -> null
+              - type       = "string" -> null
+            }
+          - columns {
+              - comment    = "Transportadora responsable del intento." -> null
+              - name       = "transportadora" -> null
+              - parameters = {} -> null
+              - type       = "string" -> null
+            }
+          - columns {
+              - comment    = "entregado, destinatario_ausente o direccion_incorrecta." -> null
+              - name       = "estado" -> null
+              - parameters = {} -> null
+              - type       = "string" -> null
+            }
+          - columns {
+              - comment    = "Duración en minutos; 0 en los intentos fallidos." -> null
+              - name       = "duracion_minutos" -> null
+              - parameters = {} -> null
+              - type       = "int" -> null
+            }
+
+          - ser_de_info {
+              - name                  = "csv-coma" -> null
+              - parameters            = {
+                  - "field.delim"          = ","
+                  - "serialization.format" = ","
+                } -> null
+              - serialization_library = "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe" -> null
+            }
+        }
+    }
+
+  # aws_s3_bucket.datos will be destroyed
+  - resource "aws_s3_bucket" "datos" {
+      - arn                         = "arn:aws:s3:::de-gr02-user-4-entregas-examen" -> null
+      - bucket                      = "de-gr02-user-4-entregas-examen" -> null
+      - bucket_domain_name          = "de-gr02-user-4-entregas-examen.s3.amazonaws.com" -> null
+      - bucket_namespace            = "global" -> null
+      - bucket_region               = "us-east-2" -> null
+      - bucket_regional_domain_name = "de-gr02-user-4-entregas-examen.s3.us-east-2.amazonaws.com" -> null
+      - force_destroy               = false -> null
+      - hosted_zone_id              = "Z2O1EMRO9K5GLX" -> null
+      - id                          = "de-gr02-user-4-entregas-examen" -> null
+      - object_lock_enabled         = false -> null
+      - region                      = "us-east-2" -> null
+      - request_payer               = "BucketOwner" -> null
+      - tags                        = {} -> null
+      - tags_all                    = {} -> null
+        # (3 unchanged attributes hidden)
+
+      - grant {
+          - id          = "7a084156d72c34d86f34be23b3afee66b43fd4916eb5ad3c18491a55e6876766" -> null
+          - permissions = [
+              - "FULL_CONTROL",
+            ] -> null
+          - type        = "CanonicalUser" -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - server_side_encryption_configuration {
+          - rule {
+              - bucket_key_enabled = false -> null
+
+              - apply_server_side_encryption_by_default {
+                  - sse_algorithm     = "AES256" -> null
+                    # (1 unchanged attribute hidden)
+                }
+            }
+        }
+
+      - versioning {
+          - enabled    = false -> null
+          - mfa_delete = false -> null
+        }
+    }
+
+  # aws_s3_bucket_ownership_controls.datos will be destroyed
+  - resource "aws_s3_bucket_ownership_controls" "datos" {
+      - bucket = "de-gr02-user-4-entregas-examen" -> null
+      - id     = "de-gr02-user-4-entregas-examen" -> null
+      - region = "us-east-2" -> null
+
+      - rule {
+          - object_ownership = "BucketOwnerEnforced" -> null
+        }
+    }
+
+  # aws_s3_bucket_public_access_block.datos will be destroyed
+  - resource "aws_s3_bucket_public_access_block" "datos" {
+      - block_public_acls       = true -> null
+      - block_public_policy     = true -> null
+      - bucket                  = "de-gr02-user-4-entregas-examen" -> null
+      - id                      = "de-gr02-user-4-entregas-examen" -> null
+      - ignore_public_acls      = true -> null
+      - region                  = "us-east-2" -> null
+      - restrict_public_buckets = true -> null
+    }
+
+  # aws_s3_bucket_server_side_encryption_configuration.datos will be destroyed
+  - resource "aws_s3_bucket_server_side_encryption_configuration" "datos" {
+      - bucket                = "de-gr02-user-4-entregas-examen" -> null
+      - id                    = "de-gr02-user-4-entregas-examen" -> null
+      - region                = "us-east-2" -> null
+        # (1 unchanged attribute hidden)
+
+      - rule {
+          - blocked_encryption_types = [
+              - "SSE-C",
+            ] -> null
+          - bucket_key_enabled       = false -> null
+
+          - apply_server_side_encryption_by_default {
+              - sse_algorithm     = "AES256" -> null
+                # (1 unchanged attribute hidden)
+            }
+        }
+    }
+
+Plan: 0 to add, 0 to change, 7 to destroy.
+
+Changes to Outputs:
+  - base_datos                  = "de_gr02_user_4_entregas" -> null
+  - bucket                      = "de-gr02-user-4-entregas-examen" -> null
+  - region                      = "us-east-2" -> null
+  - tabla                       = "entregas" -> null
+  - tabla_completa              = "de_gr02_user_4_entregas.entregas" -> null
+  - ubicacion_datos             = "s3://de-gr02-user-4-entregas-examen/entregas/" -> null
+  - ubicacion_resultados_athena = "s3://de-gr02-user-4-entregas-examen/resultados-athena/" -> null
+  - workgroup                   = "de-gr02-user-4-entregas" -> null
+
+─────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
+
+########## 5. terraform destroy -auto-approve ##########
+aws_glue_catalog_database.entregas: Refreshing state... [id=802655955683:de_gr02_user_4_entregas]
+aws_s3_bucket.datos: Refreshing state... [id=de-gr02-user-4-entregas-examen]
+aws_s3_bucket_public_access_block.datos: Refreshing state... [id=de-gr02-user-4-entregas-examen]
+aws_s3_bucket_ownership_controls.datos: Refreshing state... [id=de-gr02-user-4-entregas-examen]
+aws_s3_bucket_server_side_encryption_configuration.datos: Refreshing state... [id=de-gr02-user-4-entregas-examen]
+aws_athena_workgroup.entregas: Refreshing state... [id=de-gr02-user-4-entregas]
+aws_glue_catalog_table.entregas: Refreshing state... [id=802655955683:de_gr02_user_4_entregas:entregas]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_athena_workgroup.entregas will be destroyed
+  - resource "aws_athena_workgroup" "entregas" {
+      - arn           = "arn:aws:athena:us-east-2:802655955683:workgroup/de-gr02-user-4-entregas" -> null
+      - description   = "Consultas del examen final sobre la tabla de entregas." -> null
+      - force_destroy = true -> null
+      - id            = "de-gr02-user-4-entregas" -> null
+      - name          = "de-gr02-user-4-entregas" -> null
+      - region        = "us-east-2" -> null
+      - state         = "ENABLED" -> null
+      - tags          = {} -> null
+      - tags_all      = {} -> null
+
+      - configuration {
+          - bytes_scanned_cutoff_per_query          = 0 -> null
+          - enable_minimum_encryption_configuration = false -> null
+          - enforce_workgroup_configuration         = true -> null
+          - publish_cloudwatch_metrics_enabled      = false -> null
+          - requester_pays_enabled                  = false -> null
+            # (1 unchanged attribute hidden)
+
+          - engine_version {
+              - effective_engine_version = "Athena engine version 3" -> null
+              - selected_engine_version  = "AUTO" -> null
+            }
+
+          - result_configuration {
+              - output_location       = "s3://de-gr02-user-4-entregas-examen/resultados-athena/" -> null
+                # (1 unchanged attribute hidden)
+
+              - encryption_configuration {
+                  - encryption_option = "SSE_S3" -> null
+                    # (1 unchanged attribute hidden)
+                }
+            }
+        }
+    }
+
+  # aws_glue_catalog_database.entregas will be destroyed
+  - resource "aws_glue_catalog_database" "entregas" {
+      - arn          = "arn:aws:glue:us-east-2:802655955683:database/de_gr02_user_4_entregas" -> null
+      - catalog_id   = "802655955683" -> null
+      - description  = "Intentos de entrega de paquetes (examen final, punto 1)." -> null
+      - id           = "802655955683:de_gr02_user_4_entregas" -> null
+      - name         = "de_gr02_user_4_entregas" -> null
+      - parameters   = {} -> null
+      - region       = "us-east-2" -> null
+      - tags         = {} -> null
+      - tags_all     = {} -> null
+        # (1 unchanged attribute hidden)
+
+      - create_table_default_permission {
+          - permissions = [
+              - "ALL",
+            ] -> null
+
+          - principal {
+              - data_lake_principal_identifier = "IAM_ALLOWED_PRINCIPALS" -> null
+            }
+        }
+    }
+
+  # aws_glue_catalog_table.entregas will be destroyed
+  - resource "aws_glue_catalog_table" "entregas" {
+      - arn                = "arn:aws:glue:us-east-2:802655955683:table/de_gr02_user_4_entregas/entregas" -> null
+      - catalog_id         = "802655955683" -> null
+      - database_name      = "de_gr02_user_4_entregas" -> null
+      - description        = "Un intento de entrega por fila. La fecha sale de la carpeta fecha=yyyy-MM-dd." -> null
+      - id                 = "802655955683:de_gr02_user_4_entregas:entregas" -> null
+      - name               = "entregas" -> null
+      - parameters         = {
+          - "EXTERNAL"                       = "TRUE"
+          - "classification"                 = "csv"
+          - "projection.enabled"             = "true"
+          - "projection.fecha.format"        = "yyyy-MM-dd"
+          - "projection.fecha.interval"      = "1"
+          - "projection.fecha.interval.unit" = "DAYS"
+          - "projection.fecha.range"         = "2026-10-01,2026-10-03"
+          - "projection.fecha.type"          = "date"
+          - "skip.header.line.count"         = "1"
+          - "storage.location.template"      = "s3://de-gr02-user-4-entregas-examen/entregas/fecha=${fecha}/"
+        } -> null
+      - region             = "us-east-2" -> null
+      - retention          = 0 -> null
+      - table_type         = "EXTERNAL_TABLE" -> null
+        # (3 unchanged attributes hidden)
+
+      - partition_keys {
+          - comment    = "Fecha del archivo diario, tomada de la carpeta fecha=yyyy-MM-dd." -> null
+          - name       = "fecha" -> null
+          - parameters = {} -> null
+          - type       = "string" -> null
+        }
+
+      - storage_descriptor {
+          - additional_locations      = [] -> null
+          - bucket_columns            = [] -> null
+          - compressed                = false -> null
+          - input_format              = "org.apache.hadoop.mapred.TextInputFormat" -> null
+          - location                  = "s3://de-gr02-user-4-entregas-examen/entregas/" -> null
+          - number_of_buckets         = 0 -> null
+          - output_format             = "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat" -> null
+          - parameters                = {} -> null
+          - stored_as_sub_directories = false -> null
+
+          - columns {
+              - comment    = "Identificador único del envío." -> null
+              - name       = "id_envio" -> null
+              - parameters = {} -> null
+              - type       = "string" -> null
+            }
+          - columns {
+              - comment    = "Ciudad del intento de entrega." -> null
+              - name       = "ciudad" -> null
+              - parameters = {} -> null
+              - type       = "string" -> null
+            }
+          - columns {
+              - comment    = "Transportadora responsable del intento." -> null
+              - name       = "transportadora" -> null
+              - parameters = {} -> null
+              - type       = "string" -> null
+            }
+          - columns {
+              - comment    = "entregado, destinatario_ausente o direccion_incorrecta." -> null
+              - name       = "estado" -> null
+              - parameters = {} -> null
+              - type       = "string" -> null
+            }
+          - columns {
+              - comment    = "Duración en minutos; 0 en los intentos fallidos." -> null
+              - name       = "duracion_minutos" -> null
+              - parameters = {} -> null
+              - type       = "int" -> null
+            }
+
+          - ser_de_info {
+              - name                  = "csv-coma" -> null
+              - parameters            = {
+                  - "field.delim"          = ","
+                  - "serialization.format" = ","
+                } -> null
+              - serialization_library = "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe" -> null
+            }
+        }
+    }
+
+  # aws_s3_bucket.datos will be destroyed
+  - resource "aws_s3_bucket" "datos" {
+      - arn                         = "arn:aws:s3:::de-gr02-user-4-entregas-examen" -> null
+      - bucket                      = "de-gr02-user-4-entregas-examen" -> null
+      - bucket_domain_name          = "de-gr02-user-4-entregas-examen.s3.amazonaws.com" -> null
+      - bucket_namespace            = "global" -> null
+      - bucket_region               = "us-east-2" -> null
+      - bucket_regional_domain_name = "de-gr02-user-4-entregas-examen.s3.us-east-2.amazonaws.com" -> null
+      - force_destroy               = false -> null
+      - hosted_zone_id              = "Z2O1EMRO9K5GLX" -> null
+      - id                          = "de-gr02-user-4-entregas-examen" -> null
+      - object_lock_enabled         = false -> null
+      - region                      = "us-east-2" -> null
+      - request_payer               = "BucketOwner" -> null
+      - tags                        = {} -> null
+      - tags_all                    = {} -> null
+        # (3 unchanged attributes hidden)
+
+      - grant {
+          - id          = "7a084156d72c34d86f34be23b3afee66b43fd4916eb5ad3c18491a55e6876766" -> null
+          - permissions = [
+              - "FULL_CONTROL",
+            ] -> null
+          - type        = "CanonicalUser" -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - server_side_encryption_configuration {
+          - rule {
+              - bucket_key_enabled = false -> null
+
+              - apply_server_side_encryption_by_default {
+                  - sse_algorithm     = "AES256" -> null
+                    # (1 unchanged attribute hidden)
+                }
+            }
+        }
+
+      - versioning {
+          - enabled    = false -> null
+          - mfa_delete = false -> null
+        }
+    }
+
+  # aws_s3_bucket_ownership_controls.datos will be destroyed
+  - resource "aws_s3_bucket_ownership_controls" "datos" {
+      - bucket = "de-gr02-user-4-entregas-examen" -> null
+      - id     = "de-gr02-user-4-entregas-examen" -> null
+      - region = "us-east-2" -> null
+
+      - rule {
+          - object_ownership = "BucketOwnerEnforced" -> null
+        }
+    }
+
+  # aws_s3_bucket_public_access_block.datos will be destroyed
+  - resource "aws_s3_bucket_public_access_block" "datos" {
+      - block_public_acls       = true -> null
+      - block_public_policy     = true -> null
+      - bucket                  = "de-gr02-user-4-entregas-examen" -> null
+      - id                      = "de-gr02-user-4-entregas-examen" -> null
+      - ignore_public_acls      = true -> null
+      - region                  = "us-east-2" -> null
+      - restrict_public_buckets = true -> null
+    }
+
+  # aws_s3_bucket_server_side_encryption_configuration.datos will be destroyed
+  - resource "aws_s3_bucket_server_side_encryption_configuration" "datos" {
+      - bucket                = "de-gr02-user-4-entregas-examen" -> null
+      - id                    = "de-gr02-user-4-entregas-examen" -> null
+      - region                = "us-east-2" -> null
+        # (1 unchanged attribute hidden)
+
+      - rule {
+          - blocked_encryption_types = [
+              - "SSE-C",
+            ] -> null
+          - bucket_key_enabled       = false -> null
+
+          - apply_server_side_encryption_by_default {
+              - sse_algorithm     = "AES256" -> null
+                # (1 unchanged attribute hidden)
+            }
+        }
+    }
+
+Plan: 0 to add, 0 to change, 7 to destroy.
+
+Changes to Outputs:
+  - base_datos                  = "de_gr02_user_4_entregas" -> null
+  - bucket                      = "de-gr02-user-4-entregas-examen" -> null
+  - region                      = "us-east-2" -> null
+  - tabla                       = "entregas" -> null
+  - tabla_completa              = "de_gr02_user_4_entregas.entregas" -> null
+  - ubicacion_datos             = "s3://de-gr02-user-4-entregas-examen/entregas/" -> null
+  - ubicacion_resultados_athena = "s3://de-gr02-user-4-entregas-examen/resultados-athena/" -> null
+  - workgroup                   = "de-gr02-user-4-entregas" -> null
+aws_s3_bucket_public_access_block.datos: Destroying... [id=de-gr02-user-4-entregas-examen]
+aws_s3_bucket_ownership_controls.datos: Destroying... [id=de-gr02-user-4-entregas-examen]
+aws_athena_workgroup.entregas: Destroying... [id=de-gr02-user-4-entregas]
+aws_glue_catalog_table.entregas: Destroying... [id=802655955683:de_gr02_user_4_entregas:entregas]
+aws_s3_bucket_server_side_encryption_configuration.datos: Destroying... [id=de-gr02-user-4-entregas-examen]
+aws_athena_workgroup.entregas: Destruction complete after 1s
+aws_glue_catalog_table.entregas: Destruction complete after 1s
+aws_s3_bucket_public_access_block.datos: Destruction complete after 1s
+aws_glue_catalog_database.entregas: Destroying... [id=802655955683:de_gr02_user_4_entregas]
+aws_s3_bucket_ownership_controls.datos: Destruction complete after 1s
+aws_s3_bucket_server_side_encryption_configuration.datos: Destruction complete after 1s
+aws_s3_bucket.datos: Destroying... [id=de-gr02-user-4-entregas-examen]
+aws_glue_catalog_database.entregas: Destruction complete after 0s
+aws_s3_bucket.datos: Destruction complete after 0s
+
+Destroy complete! Resources: 7 destroyed.
+exit=0
+
+########## 6. Verificación con la AWS CLI (2026-11-12T11:56:25Z) ##########
+$ aws s3api head-bucket --bucket de-gr02-user-4-entregas-examen
+
+aws: [ERROR]: An error occurred (404) when calling the HeadBucket operation: Not Found
+$ aws glue get-database --name de_gr02_user_4_entregas
+
+aws: [ERROR]: An error occurred (EntityNotFoundException) when calling the GetDatabase operation: Database de_gr02_user_4_entregas not found.
+$ aws glue get-table --database-name de_gr02_user_4_entregas --name entregas
+
+aws: [ERROR]: An error occurred (EntityNotFoundException) when calling the GetTable operation: Entity Not Found
+$ aws athena get-work-group --work-group de-gr02-user-4-entregas
+
+aws: [ERROR]: An error occurred (InvalidRequestException) when calling the GetWorkGroup operation: WorkGroup is not found.
+
+Additional error details:
+AthenaErrorCode: INVALID_INPUT
+$ buckets con prefijo de-gr02-user-4
+[]
+$ bases de Glue con prefijo de_gr02_user_4
+[]
+$ workgroups de Athena
+[
+    "de-final-entregas-gr01-user3",
+    "entregas-jjrp-wg",
+    "entregas_jero_wg",
+    "primary"
+]
