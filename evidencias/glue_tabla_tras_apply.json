@@ -1,0 +1,89 @@
+{
+    "Table": {
+        "Name": "entregas",
+        "DatabaseName": "de_gr02_user_4_entregas",
+        "Description": "Un intento de entrega por fila. La fecha sale de la carpeta fecha=yyyy-MM-dd.",
+        "CreateTime": "2026-11-12T06:48:14-05:00",
+        "UpdateTime": "2026-11-12T06:48:14-05:00",
+        "Retention": 0,
+        "StorageDescriptor": {
+            "Columns": [
+                {
+                    "Name": "id_envio",
+                    "Type": "string",
+                    "Comment": "Identificador único del envío.",
+                    "Parameters": {}
+                },
+                {
+                    "Name": "ciudad",
+                    "Type": "string",
+                    "Comment": "Ciudad del intento de entrega.",
+                    "Parameters": {}
+                },
+                {
+                    "Name": "transportadora",
+                    "Type": "string",
+                    "Comment": "Transportadora responsable del intento.",
+                    "Parameters": {}
+                },
+                {
+                    "Name": "estado",
+                    "Type": "string",
+                    "Comment": "entregado, destinatario_ausente o direccion_incorrecta.",
+                    "Parameters": {}
+                },
+                {
+                    "Name": "duracion_minutos",
+                    "Type": "int",
+                    "Comment": "Duración en minutos; 0 en los intentos fallidos.",
+                    "Parameters": {}
+                }
+            ],
+            "Location": "s3://de-gr02-user-4-entregas-examen/entregas/",
+            "AdditionalLocations": [],
+            "InputFormat": "org.apache.hadoop.mapred.TextInputFormat",
+            "OutputFormat": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+            "Compressed": false,
+            "NumberOfBuckets": 0,
+            "SerdeInfo": {
+                "Name": "csv-coma",
+                "SerializationLibrary": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+                "Parameters": {
+                    "serialization.format": ",",
+                    "field.delim": ","
+                }
+            },
+            "BucketColumns": [],
+            "SortColumns": [],
+            "Parameters": {},
+            "StoredAsSubDirectories": false
+        },
+        "PartitionKeys": [
+            {
+                "Name": "fecha",
+                "Type": "string",
+                "Comment": "Fecha del archivo diario, tomada de la carpeta fecha=yyyy-MM-dd.",
+                "Parameters": {}
+            }
+        ],
+        "TableType": "EXTERNAL_TABLE",
+        "Parameters": {
+            "skip.header.line.count": "1",
+            "projection.fecha.format": "yyyy-MM-dd",
+            "projection.fecha.interval.unit": "DAYS",
+            "EXTERNAL": "TRUE",
+            "projection.fecha.range": "2026-10-01,2026-10-03",
+            "classification": "csv",
+            "projection.fecha.interval": "1",
+            "projection.enabled": "true",
+            "projection.fecha.type": "date",
+            "storage.location.template": "s3://de-gr02-user-4-entregas-examen/entregas/fecha=${fecha}/"
+        },
+        "CreatedBy": "arn:aws:iam::802655955683:user/de-gr02-user-4",
+        "IsRegisteredWithLakeFormation": false,
+        "CatalogId": "802655955683",
+        "VersionId": "0",
+        "IsMultiDialectView": false,
+        "IsMaterializedView": false
+    }
+}

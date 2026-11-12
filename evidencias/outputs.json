@@ -1,0 +1,42 @@
+{
+  "base_datos": {
+    "sensitive": false,
+    "type": "string",
+    "value": "de_gr02_user_4_entregas"
+  },
+  "bucket": {
+    "sensitive": false,
+    "type": "string",
+    "value": "de-gr02-user-4-entregas-examen"
+  },
+  "region": {
+    "sensitive": false,
+    "type": "string",
+    "value": "us-east-2"
+  },
+  "tabla": {
+    "sensitive": false,
+    "type": "string",
+    "value": "entregas"
+  },
+  "tabla_completa": {
+    "sensitive": false,
+    "type": "string",
+    "value": "de_gr02_user_4_entregas.entregas"
+  },
+  "ubicacion_datos": {
+    "sensitive": false,
+    "type": "string",
+    "value": "s3://de-gr02-user-4-entregas-examen/entregas/"
+  },
+  "ubicacion_resultados_athena": {
+    "sensitive": false,
+    "type": "string",
+    "value": "s3://de-gr02-user-4-entregas-examen/resultados-athena/"
+  },
+  "workgroup": {
+    "sensitive": false,
+    "type": "string",
+    "value": "de-gr02-user-4-entregas"
+  }
+}
