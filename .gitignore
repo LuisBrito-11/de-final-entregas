@@ -1,0 +1,24 @@
+# Estado y carpeta local de Terraform (nunca se publican)
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+crash.log
+crash.*.log
+.terraform.tfstate.lock.info
+*.tfvars
+!ejemplo.tfvars
+
+# Credenciales y configuración local
+.env
+.env.*
+*.pem
+*.key
+credentials
+.aws/
+
+# Archivos del sistema y temporales
+.DS_Store
+Thumbs.db
+*.tmp

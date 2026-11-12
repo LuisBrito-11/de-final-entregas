@@ -1,0 +1,5 @@
+# Todo el texto del repositorio se guarda y se extrae con finales de línea LF.
+# Los CSV suministrados no deben cambiar: se tratan además como binarios para
+# que git nunca los convierta.
+* text=auto eol=lf
+*.csv -text
