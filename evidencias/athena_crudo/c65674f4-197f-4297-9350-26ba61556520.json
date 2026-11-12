@@ -1,0 +1,44 @@
+{
+    "QueryExecution": {
+        "QueryExecutionId": "c65674f4-197f-4297-9350-26ba61556520",
+        "Query": "SELECT\n    fecha,\n    id_envio,\n    ciudad,\n    transportadora,\n    estado,\n    duracion_minutos\nFROM de_gr02_user_4_entregas.entregas\nWHERE fecha = '2026-10-03'\nORDER BY id_envio ASC",
+        "StatementType": "DML",
+        "ResultConfiguration": {
+            "OutputLocation": "s3://de-gr02-user-4-entregas-examen/resultados-athena/c65674f4-197f-4297-9350-26ba61556520.csv",
+            "EncryptionConfiguration": {
+                "EncryptionOption": "SSE_S3"
+            }
+        },
+        "ResultReuseConfiguration": {
+            "ResultReuseByAgeConfiguration": {
+                "Enabled": false
+            }
+        },
+        "QueryExecutionContext": {
+            "Database": "de_gr02_user_4_entregas"
+        },
+        "Status": {
+            "State": "SUCCEEDED",
+            "SubmissionDateTime": "2026-11-12T06:52:28.291000-05:00",
+            "CompletionDateTime": "2026-11-12T06:52:28.848000-05:00"
+        },
+        "Statistics": {
+            "EngineExecutionTimeInMillis": 328,
+            "DataScannedInBytes": 323,
+            "TotalExecutionTimeInMillis": 557,
+            "QueryQueueTimeInMillis": 172,
+            "ServicePreProcessingTimeInMillis": 40,
+            "QueryPlanningTimeInMillis": 61,
+            "ServiceProcessingTimeInMillis": 17,
+            "ResultReuseInformation": {
+                "ReusedPreviousResult": false
+            }
+        },
+        "WorkGroup": "de-gr02-user-4-entregas",
+        "EngineVersion": {
+            "SelectedEngineVersion": "AUTO",
+            "EffectiveEngineVersion": "Athena engine version 3"
+        },
+        "SubstatementType": "SELECT"
+    }
+}

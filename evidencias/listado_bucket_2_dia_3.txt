@@ -1,0 +1,13 @@
+# Listado de s3://de-gr02-user-4-entregas-examen/ después de cargar el día 3 (2026-11-12T11:52:14Z)
+2026-11-12 06:49:06        313 entregas/fecha=2026-10-01/entregas.csv
+2026-11-12 06:49:07        313 entregas/fecha=2026-10-02/entregas.csv
+2026-11-12 06:52:13        323 entregas/fecha=2026-10-03/entregas.csv
+2026-11-12 06:51:14        252 resultados-athena/022723fb-e5ce-4152-89ab-afc897107a3e.csv
+2026-11-12 06:51:14        173 resultados-athena/022723fb-e5ce-4152-89ab-afc897107a3e.csv.metadata
+2026-11-12 06:51:32         57 resultados-athena/4a12c1d3-89bf-47e9-b49a-12d2f8744969.csv
+2026-11-12 06:51:33        151 resultados-athena/4a12c1d3-89bf-47e9-b49a-12d2f8744969.csv.metadata
+2026-11-12 06:51:23        160 resultados-athena/55dde145-fe22-478b-9b83-ac259516b648.csv
+2026-11-12 06:51:23        178 resultados-athena/55dde145-fe22-478b-9b83-ac259516b648.csv.metadata
+2026-11-12 06:50:55         73 resultados-athena/a934d421-ae79-4efd-8c06-a8e8a9b37685.csv
+2026-11-12 06:50:55        215 resultados-athena/a934d421-ae79-4efd-8c06-a8e8a9b37685.csv.metadata
+(fin del listado)

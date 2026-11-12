@@ -1,0 +1,44 @@
+{
+    "QueryExecution": {
+        "QueryExecutionId": "d0250d45-d373-46b3-b303-7969497d1fa3",
+        "Query": "SELECT\n    fecha,\n    ciudad,\n    CAST(\n        round(\n            100 * CAST(sum(CASE WHEN estado = 'entregado' THEN 1 ELSE 0 END) AS double)\n                / CAST(count(*) AS double),\n            2\n        ) AS decimal(5, 2)\n    ) AS porcentaje_exito\nFROM de_gr02_user_4_entregas.entregas\nGROUP BY fecha, ciudad\nORDER BY fecha ASC, ciudad ASC",
+        "StatementType": "DML",
+        "ResultConfiguration": {
+            "OutputLocation": "s3://de-gr02-user-4-entregas-examen/resultados-athena/d0250d45-d373-46b3-b303-7969497d1fa3.csv",
+            "EncryptionConfiguration": {
+                "EncryptionOption": "SSE_S3"
+            }
+        },
+        "ResultReuseConfiguration": {
+            "ResultReuseByAgeConfiguration": {
+                "Enabled": false
+            }
+        },
+        "QueryExecutionContext": {
+            "Database": "de_gr02_user_4_entregas"
+        },
+        "Status": {
+            "State": "SUCCEEDED",
+            "SubmissionDateTime": "2026-11-12T06:53:03.809000-05:00",
+            "CompletionDateTime": "2026-11-12T06:53:04.295000-05:00"
+        },
+        "Statistics": {
+            "EngineExecutionTimeInMillis": 372,
+            "DataScannedInBytes": 949,
+            "TotalExecutionTimeInMillis": 486,
+            "QueryQueueTimeInMillis": 52,
+            "ServicePreProcessingTimeInMillis": 42,
+            "QueryPlanningTimeInMillis": 86,
+            "ServiceProcessingTimeInMillis": 20,
+            "ResultReuseInformation": {
+                "ReusedPreviousResult": false
+            }
+        },
+        "WorkGroup": "de-gr02-user-4-entregas",
+        "EngineVersion": {
+            "SelectedEngineVersion": "AUTO",
+            "EffectiveEngineVersion": "Athena engine version 3"
+        },
+        "SubstatementType": "SELECT"
+    }
+}
